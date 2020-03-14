@@ -39,10 +39,12 @@
 					Выберите крепкость
 				</h2>
 				<div class="strength__button">
-						<input type="radio" id="low" class="strength__button-input1 radio" name="strength" value="Легкая"/>
+					<form id="mix" action="#" method="GET">
+						<input type="radio" class="strength__button-input1 radio elem1" name="strength" value="Легкая"/>
 						<input type="radio" class="strength__button-input2 radio" name="strength" value="Средняя"/>
 						<input type="radio" class="strength__button-input3 radio" name="strength" value="Крепкая"/>
 						<input type="radio" class="strength__button-input4 radio" name="strength" value="Очень крепкая"/>
+					</form>
 				</div>
 			</div>
 			<div class="strength__descrip descrip">
@@ -66,10 +68,12 @@
 					Выберите вкус
 				</h2>
 				<div class="flavor__button">
-						<input type="radio" class="flavor__button-input1 radioflavor" name="flavor" />
+					<form id="mix" action="#" method="GET">
+						<input type="radio" class="flavor__button-input1 radioflavor elem1" name="flavor" value="Сладкий"/>
 						<input type="radio" class="flavor__button-input2 radioflavor" name="flavor" />
 						<input type="radio" class="flavor__button-input3 radioflavor" name="flavor" />
 						<input type="radio" class="flavor__button-input4 radioflavor" name="flavor" />
+					</form>
 				</div>
 			</div>
 			<div class="flavor__descrip descrip">
@@ -93,9 +97,11 @@
 					Выберите направление
 				</h2>
 				<div class="aroma__button">
-						<input type="radio" class="aroma__button-input1 radioaroma" name="aroma" value="Фруктовый"/>
+					<form id="mix" action="#" method="GET">
+						<input type="radio" class="aroma__button-input1 radioaroma elem1" name="aroma" value="Фруктовый"/>
 						<input type="radio" class="aroma__button-input2 radioaroma" name="aroma" value="Ягодный"/>
 						<input type="radio" class="aroma__button-input3 radioaroma" name="aroma" value="Десертный"/>
+					</form>
 				</div>
 			</div>
 			<div class="selected">
@@ -106,7 +112,8 @@
 				<span>Выберите вкус</span>
 				<p>Выбранное направление: </p>
 				<span>Выберите направление</span>
-				<button form="select" type="submit">Найти</button>
+				<div id="str"></div>
+				<button form="mix" id="butt">Найти</button>
 				<hr>
 			</div>
 		</div>
@@ -123,5 +130,6 @@
 
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>
+	<script src="js/common.js"></script>
 </body>
 </html>
