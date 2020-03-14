@@ -30,12 +30,7 @@
 				margin: 50px -180px
 	.descrip
 		font-size: 14px
-		p
-			&::before
-				margin-left: -20px
-				width: 2px
-				height: 90px
-				background-color: $accent
+
 	.flavor__choose
 		h2
 			&::after
@@ -51,22 +46,49 @@
 @media only screen and (max-width : 768px)
 	.header__content
 		p
-			font-size: 36px
+			font-size: 32px
 		h1
 			font-size: 24px
 			line-height: 1.2
 	
 	.header__buttons
-    	padding: 20px 0px
+    	padding: 10px 0px
 
 	.header__link
 		padding: 5px 20px
-		font-size: 14px
+		font-size: 12px
 	.choose
 		h2
 			font-size: 16px
 		input
-			margin: 15px 5px
+			margin: 15px 30px
+	.strength__choose
+		h2
+			&::after
+				width: 50px
+				margin: 40px -160px
+
+	.flavor__choose
+		h2
+			&::after
+				width: 50px
+				margin: 40px -115px
+
+	.aroma__choose
+		input
+			margin: 15px 10px
+		h2
+			&::after
+				width: 50px
+				margin: 40px -182px
+	.selected
+		margin: 15px 50px
+		p
+        	font-size: 14px
+		span
+        	font-size: 12px
+		button
+        	padding: 10px 60px 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
