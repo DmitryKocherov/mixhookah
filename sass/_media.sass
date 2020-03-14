@@ -91,7 +91,16 @@
         	padding: 10px 60px 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 570px)
+@media only screen and (max-width : 580px)
+	.strength
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+	.flavor
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+	.aroma
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
 	.header__content
 		p
 			font-size: 24px
@@ -101,7 +110,6 @@
 	
 	.header__buttons
 		margin: auto
-		width: 200px
     	padding: 10px 0
 
 	.header__link
@@ -111,8 +119,26 @@
 		h2
 			font-size: 14px
 		input
-			margin: 15px 30px
+			margin: 15px 10px
+	.strength__choose
+		h2
+			&::after
+				width: 50px
+				margin: 40px -140px
 
+	.flavor__choose
+		h2
+			&::after
+				width: 50px
+				margin: 40px -100px
+
+	.aroma__choose
+		input
+			margin: 15px 10px
+		h2
+			&::after
+				width: 50px
+				margin: 40px -160px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
