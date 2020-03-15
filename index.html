@@ -10,7 +10,6 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
 </head>
 
 <body>
@@ -23,9 +22,9 @@
 				Для тех, кто просто хочет покурить
 			</h1>
 			<div class="header__buttons">
-				<a href="" class="header__link">топ миксов</a>
+				<a href="#" class="header__link">топ миксов</a>
 				<a href="#mix" class="header__link header__link_focus">подобрать микс</a>
-				<a href="" class="header__link">о проекте</a>
+				<a href="#" class="header__link">о проекте</a>
 			</div>
 		</div>
 
@@ -39,11 +38,11 @@
 					Выберите крепкость
 				</h2>
 				<div class="strength__button">
-					<form id="mix" action="#" method="GET">
-						<input type="radio" class="strength__button-input1 radio elem1" name="strength" value="Легкая"/>
+					<form id="mix" action="#" class="select-form">
+						<input type="radio" class="strength__button-input1 radio" name="strength" value="Легкая"/>
 						<input type="radio" class="strength__button-input2 radio" name="strength" value="Средняя"/>
 						<input type="radio" class="strength__button-input3 radio" name="strength" value="Крепкая"/>
-						<input type="radio" class="strength__button-input4 radio" name="strength" value="Очень крепкая"/>
+						<input type="radio" class="strength__button-input4 radio" name="strength" value="Смертельная"/>
 					</form>
 				</div>
 			</div>
@@ -68,11 +67,11 @@
 					Выберите вкус
 				</h2>
 				<div class="flavor__button">
-					<form id="mix" action="#" method="GET">
-						<input type="radio" class="flavor__button-input1 radioflavor elem1" name="flavor" value="Сладкий"/>
-						<input type="radio" class="flavor__button-input2 radioflavor" name="flavor" />
-						<input type="radio" class="flavor__button-input3 radioflavor" name="flavor" />
-						<input type="radio" class="flavor__button-input4 radioflavor" name="flavor" />
+					<form action="#" class="select-form">
+						<input type="radio" class="flavor__button-input1 radioflavor" name="flavor" value="Сладкий"/>
+						<input type="radio" class="flavor__button-input2 radioflavor" name="flavor" value="Кислый"/>
+						<input type="radio" class="flavor__button-input3 radioflavor" name="flavor" value="Пряный"/>
+						<input type="radio" class="flavor__button-input4 radioflavor" name="flavor" value="Травяной"/>
 					</form>
 				</div>
 			</div>
@@ -97,14 +96,14 @@
 					Выберите направление
 				</h2>
 				<div class="aroma__button">
-					<form id="mix" action="#" method="GET">
-						<input type="radio" class="aroma__button-input1 radioaroma elem1" name="aroma" value="Фруктовый"/>
+					<form action="#" class="select-form">
+						<input type="radio" class="aroma__button-input1 radioaroma" name="aroma" value="Фруктовый"/>
 						<input type="radio" class="aroma__button-input2 radioaroma" name="aroma" value="Ягодный"/>
 						<input type="radio" class="aroma__button-input3 radioaroma" name="aroma" value="Десертный"/>
 					</form>
 				</div>
 			</div>
-			<div class="selected">
+			<div class="selected" id="select">
 				<hr>
 				<p>Выбранная крепкость: </p>
 				<span>Выберите крепкость</span>
@@ -113,7 +112,7 @@
 				<p>Выбранное направление: </p>
 				<span>Выберите направление</span>
 				<div id="str"></div>
-				<button form="mix" id="butt">Найти</button>
+				<button form="mix" type="submit">Найти</button>
 				<hr>
 			</div>
 		</div>
@@ -123,13 +122,11 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__logo">
-				<p><span>mix</span>hookah</p>
+				<p><span>mix</span>hookah</p> 
 			</div>
 		</div>
 	</footer>
 
 	<link rel="stylesheet" href="css/main.min.css">
-	<script src="js/scripts.min.js"></script>
-	<script src="js/common.js"></script>
 </body>
 </html>
