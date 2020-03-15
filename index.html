@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 	<header class="header grid" style="background-image: url(img/headerImage.jpg);">
 
 		<div class="header__content grid">
@@ -29,96 +28,91 @@
 		</div>
 
 	</header>
+	<div id="app">
+		<section id="mix" class="strength">
 
-	<section id="mix" class="strength">
-
-		<div class="container grid">
-			<div class="strength__choose choose">
-				<h2>
-					Выберите крепкость
-				</h2>
-				<div class="strength__button">
-					<form id="mix" action="#" class="select-form">
-						<input type="radio" class="strength__button-input1 radio" name="strength" value="Легкая"/>
-						<input type="radio" class="strength__button-input2 radio" name="strength" value="Средняя"/>
-						<input type="radio" class="strength__button-input3 radio" name="strength" value="Крепкая"/>
-						<input type="radio" class="strength__button-input4 radio" name="strength" value="Смертельная"/>
-					</form>
+			<div class="container grid">
+				<div class="strength__choose choose">
+					<h2>
+						Выберите крепкость
+					</h2>
+					<div class="strength__button">
+						<form id="selectMix" class="select-form" action="#">
+							<input type="radio" v-model="strength" class="strength__button-input1 radio" name="strength" value="Легкая"/>
+							<input type="radio" v-model="strength" class="strength__button-input2 radio " name="strength" value="Средняя"/>
+							<input type="radio" v-model="strength" class="strength__button-input3 radio" name="strength" value="Крепкая"/>
+							<input type="radio" v-model="strength" class="strength__button-input4 radio" name="strength" value="Смертельная"/>
+						</form>
+					</div>
+				</div>
+				<div class="strength__descrip descrip">
+					<hr>
+					<p>Выбор вкуса основывается на элементах: воздух - легкий,
+						вода - средний, земля - крепкий, огонь - очень крепкий.
+						вода - средний, земля - крепкий, огонь - очень крепкий.
+						Если вы начинающий Аанг - то ваш выбор - воздух ну и тд.
+					</p>
+					<hr>
 				</div>
 			</div>
-			<div class="strength__descrip descrip">
-				<hr>
-				<p>Выбор вкуса основывается на элементах: воздух - легкий,
-					вода - средний, земля - крепкий, огонь - очень крепкий.
-					вода - средний, земля - крепкий, огонь - очень крепкий.
-					Если вы начинающий Аанг - то ваш выбор - воздух ну и тд.
-				</p>
-				<hr>
-			</div>
-		</div>
 
-	</section>
+		</section>
 
-	<section class="flavor">
+		<section class="flavor">
 
-		<div class="container grid">
-			<div class="flavor__choose choose">
-				<h2>
-					Выберите вкус
-				</h2>
-				<div class="flavor__button">
-					<form action="#" class="select-form">
-						<input type="radio" class="flavor__button-input1 radioflavor" name="flavor" value="Сладкий"/>
-						<input type="radio" class="flavor__button-input2 radioflavor" name="flavor" value="Кислый"/>
-						<input type="radio" class="flavor__button-input3 radioflavor" name="flavor" value="Пряный"/>
-						<input type="radio" class="flavor__button-input4 radioflavor" name="flavor" value="Травяной"/>
-					</form>
+			<div class="container grid">
+				<div class="flavor__choose choose">
+					<h2>
+						Выберите вкус
+					</h2>
+					<div class="flavor__button">
+						<form id="selectMix" class="select-form" action="#">
+							<input type="radio" v-model="flavor" class="flavor__button-input1" name="flavor" value="Сладкий"/>
+							<input type="radio" v-model="flavor" class="flavor__button-input2" name="flavor" value="Кислый"/>
+							<input type="radio" v-model="flavor" class="flavor__button-input3" name="flavor" value="Пряный"/>
+							<input type="radio" v-model="flavor" class="flavor__button-input4" name="flavor" value="Травяной"/>
+						</form>
+					</div>
+				</div>
+				<div class="flavor__descrip descrip">
+					<hr>
+					<p>Сладость обычно ассоциируется с присутствием сахаров, но то же 
+						ощущение возникает от глицерина, некоторых белковых веществ, 
+						аминокислот. Одним из химических носителей «сладкого» являются 
+						гидроксо-группы в больших 
+					</p>
+					<hr>
 				</div>
 			</div>
-			<div class="flavor__descrip descrip">
-				<hr>
-				<p>Сладость обычно ассоциируется с присутствием сахаров, но то же 
-					ощущение возникает от глицерина, некоторых белковых веществ, 
-					аминокислот. Одним из химических носителей «сладкого» являются 
-					гидроксо-группы в больших 
-				</p>
-				<hr>
-			</div>
-		</div>
 
-	</section>
+		</section>
 
-	<section class="aroma">
+		<section class="aroma">
 
-		<div class="container grid">
-			<div class="aroma__choose choose">
-				<h2>
-					Выберите направление
-				</h2>
-				<div class="aroma__button">
-					<form action="#" class="select-form">
-						<input type="radio" class="aroma__button-input1 radioaroma" name="aroma" value="Фруктовый"/>
-						<input type="radio" class="aroma__button-input2 radioaroma" name="aroma" value="Ягодный"/>
-						<input type="radio" class="aroma__button-input3 radioaroma" name="aroma" value="Десертный"/>
-					</form>
+			<div class="container grid">
+				<div class="aroma__choose choose">
+					<h2>
+						Выберите направление
+					</h2>
+					<div class="aroma__button">
+						<form id="selectMix" class="select-form" action="#">
+							<input type="radio" v-model="aroma" class="aroma__button-input1" name="aroma" value="Фруктовый"/>
+							<input type="radio" v-model="aroma" class="aroma__button-input2" name="aroma" value="Ягодный"/>
+							<input type="radio" v-model="aroma" class="aroma__button-input3" name="aroma" value="Десертный"/>
+						</form>
+					</div>
+				</div>
+				<div class="selected">
+					<hr>
+					<p>Выбранная крепкость:</p><span>{{strength}}</span><br>
+					<p>Выбранный вкус:</p><span>{{flavor}}</span><br>
+					<p>Выбранное направление:</p><span>{{aroma}}</span><br>
+					<button form="selectMix">Найти</button>
+					<hr>
 				</div>
 			</div>
-			<div class="selected" id="select">
-				<hr>
-				<p>Выбранная крепкость: </p>
-				<span>Выберите крепкость</span>
-				<p>Выбранный вкус: </p>
-				<span>Выберите вкус</span>
-				<p>Выбранное направление: </p>
-				<span>Выберите направление</span>
-				<div id="str"></div>
-				<button form="mix" type="submit">Найти</button>
-				<hr>
-			</div>
-		</div>
-
-	</section>
-
+		</section>
+</div>
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__logo">
@@ -128,5 +122,7 @@
 	</footer>
 
 	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/vue.js"></script>
+	<script src="js/test.js"></script>
 </body>
 </html>
