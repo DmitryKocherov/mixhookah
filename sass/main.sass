@@ -69,24 +69,40 @@ hr
         border: 1px solid$accent
     
 .container
+    grid-template-columns: 1fr 1fr
     max-width: 980px
     margin: auto
     padding: 0 $gutter
 
-.strength
-    .container
-        grid-template-columns: 1fr 1fr
-    padding: 30px 0
+.title-hover
+    min-height: 150px
+    &:hover
+        &::after
+            width: 85px
+            content: attr(data-title)
+            position: relative
+            display: inline-block
+            background: $accent
+            color: #fff
+            text-align: center
+            font-size: 13px
+            padding: 2px
+            opacity: 0.4
 
-.select-form
-    margin-top: 30px
 .choose
+    form
+        text-align: center
+    hr
+        margin: 0
+        width: 80px
+        border-top: 2px solid $accent
     h2
         font-size: 24px
         color: $dark
         text-align: left
         position: relative
     input
+        margin-top: 20px
         appearance: none
         right: 0
         bottom: 0
@@ -96,14 +112,11 @@ hr
         transition: all 0.15s ease-out 0s
         border: 1px solid$accent
         cursor: pointer
-        display: inline-block
         outline: none
         position: relative
         border-radius: 50%
-        margin: 20px 20px
-        &:hover
-            background: $accent
         &:checked
+            opacity: 1
             background: $accent
             border: 1px solid$dark
             &::before
@@ -113,58 +126,52 @@ hr
                 position: absolute
                 display: inline-block
                 text-align: center
-.strength__button-input1
-        content: url("")
-.strength__button-input2
-        content: url("")
-.strength__button-input3
-        content: url("")
-.strength__button-input4
-        content: url("")
 
-.strength__choose
-    h2
-        &::after
-            content: ''
-            position: absolute
-            width: 80px
-            height: 2px
-            background-color: $accent
-            margin: 50px -240px
+.strength__button
+    form
+        grid-gap: $gutter
+        grid-template-columns: repeat( 4, 1fr)
+
+.strength__button-input1
+        content: url("../img/air.png")
+        opacity: 0.6
+.strength__button-input2
+        content: url("../img/water.png")
+        opacity: 0.6
+.strength__button-input3
+        content: url("../img/earth.png")
+        opacity: 0.6
+.strength__button-input4
+        content: url("../img/fire.png")
+        opacity: 0.6
 
 .descrip
     padding: $gutter
     p
         text-align: center
 
-.flavor
-    .container
-        grid-template-columns: 1fr 1fr
-    padding: 30px 0
+.flavor__button
+    form
+        grid-gap: $gutter
+        grid-template-columns: repeat( 4, 1fr)
 
 .flavor__button-input1
-        content: url("")
+        content: url("../img/sweet.png")
+        opacity: 0.6
 .flavor__button-input2
-        content: url("")
+        content: url("../img/sour.png")
+        opacity: 0.6
 .flavor__button-input3
-        content: url("")
+        content: url("../img/sweet.png")
+        opacity: 0.6
 .flavor__button-input4
-        content: url("")
-    
-.flavor__choose
-    h2
-        &::after
-            content: ''
-            position: absolute
-            width: 80px
-            height: 2px
-            background-color: $accent
-            margin: 50px -173px
+        content: url("../img/sour.png")
+        opacity: 0.6
 
-.aroma
-    .container
-        grid-template-columns: 1fr 1fr
-    padding: 30px 0
+.aroma__button
+    form
+        grid-gap: $gutter
+        grid-template-columns: repeat( 3, 1fr )
 
 .aroma__button-input1
         content: url("")
@@ -174,27 +181,19 @@ hr
         content: url("")
 .aroma__button-input4
         content: url("")
-    
-.aroma__choose
-    h2
-        &::after
-            content: ''
-            position: absolute
-            width: 80px
-            height: 2px
-            background-color: $accent
-            margin: 50px -274px
 
 .selected
-    margin: 50px 100px
+    min-height: 250px
+    min-width: 380px
+    padding: $gutter
     text-align: center
     p
         line-height: 0.8
-        font-size: 16px
+        font-size: 18px
     span
         color: $accent
         font-family: ubuntu-medium, sans-serif
-        font-size: 14px
+        font-size: 16px
     button
         cursor: pointer
         margin-top: 20px

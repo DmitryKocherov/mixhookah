@@ -5,8 +5,8 @@
 
 	<meta charset="utf-8">
 
-	<title>MixHookah</title>
-	<meta name="description" content="">
+	<title>MixHookah - найди свой микс</title>
+	<meta name="description" content="Мы подберем для вас лучший микс, который вы запомните навсегда">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -36,27 +36,28 @@
 					<h2>
 						Выберите крепкость
 					</h2>
+					<hr>
 					<div class="strength__button">
-						<form id="selectMix" class="select-form" action="#">
-							<input type="radio" v-model="strength" class="strength__button-input1 radio" name="strength" value="Легкая"/>
-							<input type="radio" v-model="strength" class="strength__button-input2 radio " name="strength" value="Средняя"/>
-							<input type="radio" v-model="strength" class="strength__button-input3 radio" name="strength" value="Крепкая"/>
-							<input type="radio" v-model="strength" class="strength__button-input4 radio" name="strength" value="Смертельная"/>
+						<form id="selectMix" class="grid" action="#">
+							<div class="title-hover" data-title="Легкая"><input type="radio" v-model="strength" class="strength__button-input1 radio" name="strength" value="Легкая"/></div>
+							<div class="title-hover" data-title="Средняя"><input type="radio" v-model="strength" class="strength__button-input2 radio " name="strength" value="Средняя"/></div>
+							<div class="title-hover" data-title="Тяжелая"><input type="radio" v-model="strength" class="strength__button-input3 radio" name="strength" value="Тяжелая"/></div>
+							<div class="title-hover" data-title="Смертельная"><input type="radio" v-model="strength" class="strength__button-input4 radio" name="strength" value="Смертельная"/></div>
 						</form>
 					</div>
 				</div>
 				<div class="strength__descrip descrip">
 					<hr>
-					<p>Выбор вкуса основывается на элементах: воздух - легкий,
-						вода - средний, земля - крепкий, огонь - очень крепкий.
-						вода - средний, земля - крепкий, огонь - очень крепкий.
-						Если вы начинающий Аанг - то ваш выбор - воздух ну и тд.
+					<p> Воздух - самая легкая забивка, дым есть и хорошо. <br>
+						Вода -  средняя забивка, мягкая и приятная. <br>
+						Земля - забивка для уверенных в себе людей. <br>
+						Огонь - категория для экстремалов, кто хочет что бы его легкие вышли после первой затяжки.<br>
 					</p>
 					<hr>
+					</div>
 				</div>
-			</div>
-
-		</section>
+			
+			</section>
 
 		<section class="flavor">
 
@@ -65,21 +66,23 @@
 					<h2>
 						Выберите вкус
 					</h2>
+					<hr>
 					<div class="flavor__button">
-						<form id="selectMix" class="select-form" action="#">
-							<input type="radio" v-model="flavor" class="flavor__button-input1" name="flavor" value="Сладкий"/>
-							<input type="radio" v-model="flavor" class="flavor__button-input2" name="flavor" value="Кислый"/>
-							<input type="radio" v-model="flavor" class="flavor__button-input3" name="flavor" value="Пряный"/>
-							<input type="radio" v-model="flavor" class="flavor__button-input4" name="flavor" value="Травяной"/>
+						<form id="selectMix" class="grid" action="#">
+							<div class="title-hover" data-title="Сладкий"><input type="radio" v-model="flavor" class="flavor__button-input1 radio" name="flavor" value="Сладкий"/></div>
+							<div class="title-hover" data-title="Кислый"><input type="radio" v-model="flavor" class="flavor__button-input2 radio" name="flavor" value="Кислый"/></div>
+							<div class="title-hover" data-title="Пряный"><input type="radio" v-model="flavor" class="flavor__button-input3 radio" name="flavor" value="Пряный"/></div>
+							<div class="title-hover" data-title="Травяной"><input type="radio" v-model="flavor" class="flavor__button-input4 radio" name="flavor" value="Травяной"/></div>
 						</form>
 					</div>
 				</div>
 				<div class="flavor__descrip descrip">
 					<hr>
-					<p>Сладость обычно ассоциируется с присутствием сахаров, но то же 
-						ощущение возникает от глицерина, некоторых белковых веществ, 
-						аминокислот. Одним из химических носителей «сладкого» являются 
-						гидроксо-группы в больших 
+					<p>
+						Сладкий - в микс будут добавлены <br>
+						Кислый - в микс будут добавлены  <br>
+						Пряный - в микс будут добавлены  <br>
+						Травяной - в микс будут  <br>добавлены
 					</p>
 					<hr>
 				</div>
@@ -94,11 +97,12 @@
 					<h2>
 						Выберите направление
 					</h2>
+					<hr>
 					<div class="aroma__button">
-						<form id="selectMix" class="select-form" action="#">
-							<input type="radio" v-model="aroma" class="aroma__button-input1" name="aroma" value="Фруктовый"/>
-							<input type="radio" v-model="aroma" class="aroma__button-input2" name="aroma" value="Ягодный"/>
-							<input type="radio" v-model="aroma" class="aroma__button-input3" name="aroma" value="Десертный"/>
+						<form id="selectMix" class="select-form grid" action="#">
+							<div class="title-hover" data-title="Фруктовый"><input type="radio" v-model="aroma" class="aroma__button-input1" name="aroma" value="Фруктовый"/></div>
+							<div class="title-hover" data-title="Ягодный"><input type="radio" v-model="aroma" class="aroma__button-input2" name="aroma" value="Ягодный"/></div>
+							<div class="title-hover" data-title="Десертный"><input type="radio" v-model="aroma" class="aroma__button-input3" name="aroma" value="Десертный"/></div>
 						</form>
 					</div>
 				</div>
@@ -121,7 +125,7 @@
 		</div>
 	</footer>
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.min.css?v1.2">
 	<script src="js/vue.js"></script>
 	<script src="js/test.js"></script>
 </body>

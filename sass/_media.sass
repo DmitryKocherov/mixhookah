@@ -18,89 +18,53 @@
 
 	.header__buttons
     	padding: 30px 0px
+
 	.choose
 		h2
 			font-size: 18px
-		input
-			margin: 15px 10px
-	.strength__choose
-		h2
-			&::after
-				width: 60px
-				margin: 50px -180px
+	
 	.descrip
 		font-size: 14px
-
-	.flavor__choose
-		h2
-			&::after
-				width: 60px
-				margin: 50px -130px
-	.aroma__choose
-		h2
-			&::after
-				width: 60px
-				margin: 50px -205px
 	
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.header__content
 		p
 			font-size: 32px
-		h1
+		h1	
 			font-size: 24px
 			line-height: 1.2
-	
-	.header__buttons
-    	padding: 10px 0px
 
+	
 	.header__link
 		padding: 5px 20px
 		font-size: 12px
+
+	.strength
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+	.flavor
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+	.aroma
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))	
 	.choose
 		h2
 			font-size: 16px
-		input
-			margin: 15px 30px
-	.strength__choose
-		h2
-			&::after
-				width: 50px
-				margin: 40px -160px
-
-	.flavor__choose
-		h2
-			&::after
-				width: 50px
-				margin: 40px -115px
-
-	.aroma__choose
-		input
-			margin: 15px 10px
-		h2
-			&::after
-				width: 50px
-				margin: 40px -182px
+		hr
+        	width: 50px
+	
 	.selected
-		margin: 15px 50px
 		p
-        	font-size: 14px
+        	font-size: 16px
 		span
-        	font-size: 12px
+        	font-size: 14px
 		button
         	padding: 10px 60px 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 580px)
-	.strength
-		.container
-        	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-	.flavor
-		.container
-        	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-	.aroma
-		.container
-        	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
 	.header__content
 		p
 			font-size: 24px
@@ -115,29 +79,39 @@
 	.header__link
 		display: grid
 		font-size: 14px
+
 	.choose
 		h2
 			font-size: 14px
-		input
-			margin: 15px 5px
-	.strength__choose
-		h2
-			&::after
-				width: 50px
-				margin: 40px -140px
-
-	.flavor__choose
-		h2
-			&::after
-				width: 50px
-				margin: 40px -100px
-
-	.aroma__choose
-		input
-			margin: 15px 20px
-		h2
-			&::after
-				width: 50px
-				margin: 40px -160px
+	
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 401px)
+	.strength
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	.flavor
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	.aroma
+		.container
+        	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))	
+	.strength__button
+		form
+			grid-gap: 5px
+			grid-template-columns: repeat( 2, 1fr)
+	.flavor__button
+		form
+			grid-gap: 5px
+			grid-template-columns: repeat( 2, 1fr)
+	.aroma__button
+		form
+			grid-gap: 10px
+			grid-template-columns: repeat( 3, 1fr)
 	.selected
-		margin: 30px 40px
+    	min-width: 300px
+	.title-hover
+		&:hover
+			&::after
+				padding: 10px
+				width: 120px
+				font-size: 11px
